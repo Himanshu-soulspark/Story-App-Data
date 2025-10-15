@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shubhzone Job Application</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#007BFF",
+            "background-light": "#F8F9FA",
+            "background-dark": "#1a1a1a",
+            "text-light": "#343A40",
+            "text-dark": "#F8F9FA",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between border-b border-gray-200 dark:border-gray-700">
+<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Shubhzone</h2>
+</header>
+<main>
+<div class="@container">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4" data-alt="Professional smiling woman in an office" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAH--atXRnqOPJi40Pn4G-kXqMa1MrSohxsh9YYDPKbab4dnecfNCXz0oXvjZFwpfep0kXh8m2Y8APCNDKrGYrkV1vbLt8GuW9AmYxvCdbFtlE9TYmNlagVAuIxz9uGdxxP8d_7A6TBi2zzHq21nz5VAIXB8gbdqEpF9O6uVL-KukPvof6PlV1lilz1Rm7CFracUL3DE_iWp3mY4ES_n28qM8m8J0EOTlMJoCzTMgIELt4dkSprT3zjcI8DSDwsgXHgbH3IK5Xk2Rk");'>
+<div class="flex flex-col gap-2 text-center">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                Job Opportunity: Earn ₹20,000-₹30,000 with Zero Investment
+              </h1>
+<p class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                Join Shubhzone and start your career today with no upfront investment.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<section class="px-4 pb-8 pt-6 @[480px]:px-6">
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Apply Now</h2>
+<form class="flex flex-col gap-4" id="jobApplicationForm" onsubmit="sendToWhatsApp(event)">
+<label class="flex flex-col">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" id="fullName" placeholder="Enter your full name" required="" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Age</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" id="age" placeholder="Enter your age" required="" type="number" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Gender</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-[15px] text-base font-normal leading-normal" id="gender" required="">
+<option disabled="" selected="" value="">Select your gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+</label>
+<label class="flex flex-col">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Address</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-28 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" id="address" placeholder="Enter your full address" required=""></textarea>
+</label>
+<label class="flex flex-col">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Qualification</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" id="qualification" placeholder="e.g., High School, Bachelor's Degree" required="" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Marital Status</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-[15px] text-base font-normal leading-normal" id="maritalStatus" required="">
+<option disabled="" selected="" value="">Select your marital status</option>
+<option value="single">Single</option>
+<option value="married">Married</option>
+<option value="divorced">Divorced</option>
+<option value="widowed">Widowed</option>
+</select>
+</label>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 mt-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] w-full" type="submit">
+<span class="truncate">Submit Application</span>
+</button>
+</form>
+</section>
+<section class="p-4 @[480px]:p-6">
+<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+<div class="flex flex-col items-center text-center">
+<img alt="Satisfied Individual" class="w-24 h-24 rounded-full mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACLqBr6_t20mnK-eQsKcSmwMcNMHpQdkJyIuxI7hwYrXg-G0MGWTW18RyhyyArO2ViHdx1Zhxs12TTqlR5UWK4DtDtlWRto4V9SBB0r9fIVxwpLywu-Ftnk0todLla_Cv_dfg1Y3eBBBg-ktvLP6zETYOd8lFx0SNpbq6BNFmgaNpTfLRO0FZlz8hpRqlAIdyy08nBjNdEqu1lrTOYvvl7Pwsp-ToNyUjDRnwBvKkWIe4ZccwN-rMj01QGeyEqzmC92c6rWkWeodg"/>
+<p class="text-text-light dark:text-text-dark italic">"Shubhzone gave me the opportunity to build a career without any financial burden. I'm so grateful for this platform!"</p>
+<p class="text-text-light dark:text-text-dark font-bold mt-2">- Priya Sharma</p>
+</div>
+</div>
+</section>
+<section class="p-4 @[480px]:p-6">
+<div class="flex flex-col md:flex-row items-center gap-6">
+<div class="w-full md:w-1/2">
+<img alt="Career Growth Illustration" class="rounded-lg shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMjWKxrrm0RpveD9NFtikcRYoKl2tlbdpNXxofcAcUhbtobReBDTRAmbDlZEzVZTwnvJUy3Zh3kEm915fnmWOCAFhcAiu0eRvV94DKphYnYb-HsJn3T018uekm6UNMygrjntvZbl7k-NirSDG7HiqLqrzho8v2I1OpG_Xn6lSSZBHTDtaEKGjF8hKbkDuHQTi42mTZUzrM-8AGnMNca1x6KlgSL7UdULydhBTYHfqnQfmnm55VP91aaKKZoFoMdT9YaS-5wZnb3RI"/>
+</div>
+<div class="w-full md:w-1/2">
+<h3 class="text-text-light dark:text-text-dark text-2xl font-bold mb-2">Grow With Us</h3>
+<p class="text-text-light dark:text-text-dark">We are committed to your success. At Shubhzone, you'll find ample opportunities for professional growth and development. Take the first step towards a brighter future.</p>
+</div>
+</div>
+</section>
+<section class="p-4 @[480px]:p-6">
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 text-center">Candidate Success Stories</h2>
+<div class="grid gap-6 mt-4">
+<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+<p class="text-text-light dark:text-text-dark italic">"Thanks to Shubhzone, I found a stable job with a good salary without any investment. It changed my life!"</p>
+<p class="text-text-light dark:text-text-dark font-bold mt-2">- Rohan Mehra</p>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+<p class="text-text-light dark:text-text-dark italic">"I was skeptical about the 'zero investment' claim, but Shubhzone is the real deal. I'm now earning ₹25,000 a month and supporting my family."</p>
+<p class="text-text-light dark:text-text-dark font-bold mt-2">- Anjali Singh</p>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+<p class="text-text-light dark:text-text-dark italic">"Finding a job felt impossible until I came across Shubhzone. They guided me through the whole process, and now I have a fulfilling career."</p>
+<p class="text-text-light dark:text-text-dark font-bold mt-2">- Vikram Patel</p>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+<p class="text-text-light dark:text-text-dark italic">"The team at Shubhzone is incredibly supportive. I'm so happy with my job and the financial independence it has given me."</p>
+<p class="text-text-light dark:text-text-dark font-bold mt-2">- Sunita Devi</p>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+<p class="text-text-light dark:text-text-dark italic">"As a recent graduate, I was worried about finding work. Shubhzone provided a fantastic opportunity with a great salary and zero fees."</p>
+<p class="text-text-light dark:text-text-dark font-bold mt-2">- Amit Kumar</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-background-dark text-center py-6 mt-auto border-t border-gray-200 dark:border-gray-700">
+<p class="text-text-light dark:text-text-dark text-sm">© 2024 Shubhzone. All rights reserved.</p>
+<div class="mt-2">
+<a class="text-primary hover:underline text-sm mx-2" href="#">Privacy Policy</a>
+<span class="text-gray-400">|</span>
+<a class="text-primary hover:underline text-sm mx-2" href="#">Terms of Service</a>
+</div>
+</footer>
+</div>
+
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault(); // This stops the form from submitting the traditional way.
+
+    // Get the values from the form fields
+    const name = document.getElementById('fullName').value;
+    const age = document.getElementById('age').value;
+    const gender = document.getElementById('gender').value;
+    const address = document.getElementById('address').value;
+    const qualification = document.getElementById('qualification').value;
+    const maritalStatus = document.getElementById('maritalStatus').value;
+    
+    // Check if any required field is empty
+    if (!name || !age || !gender || !address || !qualification || !maritalStatus) {
+        alert("Please fill out all the fields before submitting.");
+        return;
+    }
+
+    // The phone number provided by you
+    const phoneNumber = '7390928912';
+
+    // Construct the message
+    let message = `*New Job Application from Shubhzone*\n\n`;
+    message += `*Name:* ${name}\n`;
+    message += `*Age:* ${age}\n`;
+    message += `*Gender:* ${gender}\n`;
+    message += `*Address:* ${address}\n`;
+    message += `*Qualification:* ${qualification}\n`;
+    message += `*Marital Status:* ${maritalStatus}\n`;
+
+    // Encode the message for the URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Create the WhatsApp URL
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open the WhatsApp URL in a new tab
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
+</body></html>
