@@ -1,205 +1,386 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Shubhzone Job Application</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#007BFF",
-            "background-light": "#F8F9FA",
-            "background-dark": "#1a1a1a",
-            "text-light": "#343A40",
-            "text-dark": "#F8F9FA",
-          },
-          fontFamily: {
-            "display": ["Manrope", "sans-serif"]
-          },
-          borderRadius: {
-            "DEFAULT": "0.25rem",
-            "lg": "0.5rem",
-            "xl": "0.75rem",
-            "full": "9999px"
-          },
-        },
-      },
-    };
-  </script>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<header class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between border-b border-gray-200 dark:border-gray-700">
-<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Shubhzone</h2>
-</header>
-<main>
-<div class="@container">
-<div class="@[480px]:p-4">
-<div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4" data-alt="Professional smiling woman in an office" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAH--atXRnqOPJi40Pn4G-kXqMa1MrSohxsh9YYDPKbab4dnecfNCXz0oXvjZFwpfep0kXh8m2Y8APCNDKrGYrkV1vbLt8GuW9AmYxvCdbFtlE9TYmNlagVAuIxz9uGdxxP8d_7A6TBi2zzHq21nz5VAIXB8gbdqEpF9O6uVL-KukPvof6PlV1lilz1Rm7CFracUL3DE_iWp3mY4ES_n28qM8m8J0EOTlMJoCzTMgIELt4dkSprT3zjcI8DSDwsgXHgbH3IK5Xk2Rk");'>
-<div class="flex flex-col gap-2 text-center">
-<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
-                Job Opportunity: Earn ₹20,000-₹30,000 with Zero Investment
-              </h1>
-<p class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                Join Shubhzone and start your career today with no upfront investment.
-              </p>
-</div>
-</div>
-</div>
-</div>
-<section class="px-4 pb-8 pt-6 @[480px]:px-6">
-<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Apply Now</h2>
-<form class="flex flex-col gap-4" id="jobApplicationForm" onsubmit="sendToWhatsApp(event)">
-<label class="flex flex-col">
-<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Name</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" id="fullName" placeholder="Enter your full name" required="" value=""/>
-</label>
-<label class="flex flex-col">
-<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Age</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" id="age" placeholder="Enter your age" required="" type="number" value=""/>
-</label>
-<label class="flex flex-col">
-<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Gender</p>
-<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-[15px] text-base font-normal leading-normal" id="gender" required="">
-<option disabled="" selected="" value="">Select your gender</option>
-<option value="male">Male</option>
-<option value="female">Female</option>
-<option value="other">Other</option>
-</select>
-</label>
-<label class="flex flex-col">
-<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Address</p>
-<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-28 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" id="address" placeholder="Enter your full address" required=""></textarea>
-</label>
-<label class="flex flex-col">
-<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Qualification</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" id="qualification" placeholder="e.g., High School, Bachelor's Degree" required="" value=""/>
-</label>
-<label class="flex flex-col">
-<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Marital Status</p>
-<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-[15px] text-base font-normal leading-normal" id="maritalStatus" required="">
-<option disabled="" selected="" value="">Select your marital status</option>
-<option value="single">Single</option>
-<option value="married">Married</option>
-<option value="divorced">Divorced</option>
-<option value="widowed">Widowed</option>
-</select>
-</label>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 mt-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] w-full" type="submit">
-<span class="truncate">Submit Application</span>
-</button>
-</form>
-</section>
-<section class="p-4 @[480px]:p-6">
-<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-<div class="flex flex-col items-center text-center">
-<img alt="Satisfied Individual" class="w-24 h-24 rounded-full mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACLqBr6_t20mnK-eQsKcSmwMcNMHpQdkJyIuxI7hwYrXg-G0MGWTW18RyhyyArO2ViHdx1Zhxs12TTqlR5UWK4DtDtlWRto4V9SBB0r9fIVxwpLywu-Ftnk0todLla_Cv_dfg1Y3eBBBg-ktvLP6zETYOd8lFx0SNpbq6BNFmgaNpTfLRO0FZlz8hpRqlAIdyy08nBjNdEqu1lrTOYvvl7Pwsp-ToNyUjDRnwBvKkWIe4ZccwN-rMj01QGeyEqzmC92c6rWkWeodg"/>
-<p class="text-text-light dark:text-text-dark italic">"Shubhzone gave me the opportunity to build a career without any financial burden. I'm so grateful for this platform!"</p>
-<p class="text-text-light dark:text-text-dark font-bold mt-2">- Priya Sharma</p>
-</div>
-</div>
-</section>
-<section class="p-4 @[480px]:p-6">
-<div class="flex flex-col md:flex-row items-center gap-6">
-<div class="w-full md:w-1/2">
-<img alt="Career Growth Illustration" class="rounded-lg shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMjWKxrrm0RpveD9NFtikcRYoKl2tlbdpNXxofcAcUhbtobReBDTRAmbDlZEzVZTwnvJUy3Zh3kEm915fnmWOCAFhcAiu0eRvV94DKphYnYb-HsJn3T018uekm6UNMygrjntvZbl7k-NirSDG7HiqLqrzho8v2I1OpG_Xn6lSSZBHTDtaEKGjF8hKbkDuHQTi42mTZUzrM-8AGnMNca1x6KlgSL7UdULydhBTYHfqnQfmnm55VP91aaKKZoFoMdT9YaS-5wZnb3RI"/>
-</div>
-<div class="w-full md:w-1/2">
-<h3 class="text-text-light dark:text-text-dark text-2xl font-bold mb-2">Grow With Us</h3>
-<p class="text-text-light dark:text-text-dark">We are committed to your success. At Shubhzone, you'll find ample opportunities for professional growth and development. Take the first step towards a brighter future.</p>
-</div>
-</div>
-</section>
-<section class="p-4 @[480px]:p-6">
-<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 text-center">Candidate Success Stories</h2>
-<div class="grid gap-6 mt-4">
-<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-<p class="text-text-light dark:text-text-dark italic">"Thanks to Shubhzone, I found a stable job with a good salary without any investment. It changed my life!"</p>
-<p class="text-text-light dark:text-text-dark font-bold mt-2">- Rohan Mehra</p>
-</div>
-<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-<p class="text-text-light dark:text-text-dark italic">"I was skeptical about the 'zero investment' claim, but Shubhzone is the real deal. I'm now earning ₹25,000 a month and supporting my family."</p>
-<p class="text-text-light dark:text-text-dark font-bold mt-2">- Anjali Singh</p>
-</div>
-<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-<p class="text-text-light dark:text-text-dark italic">"Finding a job felt impossible until I came across Shubhzone. They guided me through the whole process, and now I have a fulfilling career."</p>
-<p class="text-text-light dark:text-text-dark font-bold mt-2">- Vikram Patel</p>
-</div>
-<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-<p class="text-text-light dark:text-text-dark italic">"The team at Shubhzone is incredibly supportive. I'm so happy with my job and the financial independence it has given me."</p>
-<p class="text-text-light dark:text-text-dark font-bold mt-2">- Sunita Devi</p>
-</div>
-<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-<p class="text-text-light dark:text-text-dark italic">"As a recent graduate, I was worried about finding work. Shubhzone provided a fantastic opportunity with a great salary and zero fees."</p>
-<p class="text-text-light dark:text-text-dark font-bold mt-2">- Amit Kumar</p>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-white dark:bg-background-dark text-center py-6 mt-auto border-t border-gray-200 dark:border-gray-700">
-<p class="text-text-light dark:text-text-dark text-sm">© 2024 Shubhzone. All rights reserved.</p>
-<div class="mt-2">
-<a class="text-primary hover:underline text-sm mx-2" href="#">Privacy Policy</a>
-<span class="text-gray-400">|</span>
-<a class="text-primary hover:underline text-sm mx-2" href="#">Terms of Service</a>
-</div>
-</footer>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubhzone Job Application</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0066cc", "primary-dark": "#58a6ff", "background-light": "#FFFFFF",
+                        "background-dark": "#010409", "text-light": "#1f2328", "text-dark": "#e6edf3", "accent": "#f78166",
+                    },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] },
+                },
+            },
+        };
+    </script>
+    <style>
+        body { min-height: max(884px, 100dvh); background-color: #FFFFFF; }
+        .dark body { background-color: #010409; }
+        .btn-primary { background-color: #0066cc; transition: background-color 0.3s, transform 0.2s; box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39); }
+        .btn-primary:hover { background-color: #0052a3; transform: translateY(-2px); }
+        #passwordModal, #filterModal, .legal-page, #addCandidateModal, #descriptionModal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.85); }
+        .modal-content { background-color: #fff; margin: 10% auto; padding: 25px; border: 1px solid #888; width: 95%; max-width: 500px; border-radius: 10px; }
+        .dark .modal-content { background-color: #161b22; border-color: #30363d; }
+        .modal-close-btn { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .dark .modal-close-btn { color: #ddd; }
+        #employeePage, .legal-page { display: none; }
+        .countdown-timer { font-size: 0.8rem; color: #dc3545; font-weight: bold; }
+        #candidateDataTable tr { transition: all 0.5s ease-in-out; }
+        .data-3d-effect {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .data-3d-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        thead.professional-header { border-bottom: 3px solid transparent; border-image: linear-gradient(to right, #6a82fb, #fc5c7d); border-image-slice: 1; }
+        .testimonial-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border-radius: 1rem; padding: 1.5rem; }
+        .dark .testimonial-card { background: rgba(10, 12, 16, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .material-symbols-outlined.delete-icon { cursor: pointer; color: #ef4444; }
+        .material-symbols-outlined.delete-icon:hover { color: #dc2626; }
+        .description-card-modal .modal-content {
+            width: clamp(280px, 40vh, 400px);
+            aspect-ratio: 9 / 16;
+            display: flex;
+            flex-direction: column;
+        }
+        .description-card-modal textarea { flex-grow: 1; resize: none; }
+        .status-box {
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .status-box:hover {
+            transform: scale(1.05);
+        }
+        .success-button {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .success-button:hover {
+            background-color: #218838;
+        }
+        .success-button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+
+<!-- Main Landing Page Content -->
+<div id="mainContent">
+    <header class="absolute top-0 left-0 w-full z-50 p-4 flex justify-between items-center">
+        <h2 class="text-white text-xl font-bold">Shubhzone</h2>
+        <button class="bg-white/20 backdrop-blur-md text-white font-bold py-2 px-5 rounded-full border border-white/30 transition hover:bg-white/30" onclick="openPasswordModal()">Employee Login</button>
+    </header>
+    <main>
+        <div class="relative text-white pt-28 pb-16 md:pt-40 md:pb-24 text-center overflow-hidden bg-cover bg-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAH--atXRnqOPJi40Pn4G-kXqMa1MrSohxsh9YYDPKbab4dnecfNCXz0oXvjZFwpfep0kXh8m2Y8APCNDKrGYrkV1vbLt8GuW9AmYxvCdbFtlE9TYmNlagVAuIxz9uGdxxP8d_7A6TBi2zzHq21nz5VAIXB8gbdqEpF9O6uVL-KukPvof6PlV1lilz1Rm7CFracUL3DE_iWp3mY4ES_n28qM8m8J0EOTlMJoCzTMgIELt4dkSprT3zjcI8DSDwsgXHgbH3IK5Xk2Rk");'>
+            <div class="container mx-auto px-4 z-10 relative">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">Your Future Starts Here. Zero Investment.</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-white/80 mb-8">Join the Shubhzone team and unlock your potential to earn ₹20,000 - ₹30,000 per month. No hidden fees, no upfront costs. Just pure opportunity.</p>
+            </div>
+        </div>
+        <section class="bg-gray-50 dark:bg-background-dark py-16 px-4">
+            <div class="container mx-auto max-w-2xl">
+                <h2 class="text-3xl font-bold text-center mb-8">Apply Now</h2>
+                <form class="flex flex-col gap-4 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg data-3d-effect" id="jobApplicationForm">
+                    <label class="flex flex-col"><p class="text-base font-medium pb-2">Name</p><input class="form-input flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 focus:outline-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-4" id="fullName" placeholder="Enter your full name" required></label>
+                    <label class="flex flex-col"><p class="text-base font-medium pb-2">Age</p><input class="form-input flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 focus:outline-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-4" id="age" placeholder="Enter your age" required type="number"></label>
+                    <label class="flex flex-col"><p class="text-base font-medium pb-2">Gender</p><select class="form-select flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 focus:outline-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-4" id="gender" required><option disabled selected value="">Select your gender</option><option value="Male">Male</option><option value="Female">Female</option><option value="Other">Other</option></select></label>
+                    <label class="flex flex-col"><p class="text-base font-medium pb-2">Address</p><textarea class="form-textarea flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 focus:outline-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-28 p-4" id="address" placeholder="Enter your full address" required></textarea></label>
+                    <label class="flex flex-col"><p class="text-base font-medium pb-2">Qualification</p><input class="form-input flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 focus:outline-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-4" id="qualification" placeholder="e.g., High School, Bachelor's Degree" required></label>
+                    <label class="flex flex-col"><p class="text-base font-medium pb-2">Phone Number</p><input class="form-input flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 focus:outline-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-4" id="phone" placeholder="Enter your 10-digit phone number" required type="tel" pattern="[0-9]{10}"></label>
+                    <label class="flex flex-col"><p class="text-base font-medium pb-2">Marital Status</p><select class="form-select flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 focus:outline-0 border border-gray-300 dark:border-gray-600 focus:border-primary h-14 p-4" id="maritalStatus" required><option disabled selected value="">Select your marital status</option><option value="Single">Single</option><option value="Married">Married</option><option value="Divorced">Divorced</option><option value="Widowed">Widowed</option></select></label>
+                    <button class="btn-primary flex items-center justify-center rounded-lg h-12 px-5 mt-4 text-white text-base font-bold w-full" type="submit">Submit Application</button>
+                </form>
+            </div>
+        </section>
+        <section class="py-16 bg-gray-800 text-white">
+            <div class="container mx-auto px-4"><h2 class="text-3xl font-bold text-center mb-10">Success Stories</h2><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="testimonial-card"><p class="italic mb-4">"I was skeptical at first, but Shubhzone delivered on its promise. I'm earning a stable income from home without any investment. It has truly changed my life."</p><p class="font-bold">- Amit Kumar, Delhi</p></div><div class="testimonial-card"><p class="italic mb-4">"As a recent graduate, finding a job was tough. Shubhzone gave me a chance to start my career immediately. The platform is straightforward and the support is excellent."</p><p class="font-bold">- Priya Sharma, Mumbai</p></div><div class="testimonial-card"><p class="italic mb-4">"Financial independence was my dream, and Shubhzone helped me achieve it. I'm grateful for this opportunity that allows me to work on my own terms."</p><p class="font-bold">- Sunita Verma, Kolkata</p></div><div class="testimonial-card md:col-span-1 lg:col-span-1"><p class="italic mb-4">"The zero investment model is what attracted me. It's a genuine opportunity for anyone willing to work hard. I highly recommend it to everyone."</p><p class="font-bold">- Rajesh Singh, Chennai</p></div><div class="testimonial-card md:col-span-2 lg:col-span-2"><p class="italic mb-4">"I never thought an online platform could be this reliable. I've been with Shubhzone for six months, and my earnings have consistently grown. It's an amazing platform for self-starters."</p><p class="font-bold">- Neha Gupta, Bangalore</p></div></div></div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 dark:bg-black text-center py-6"><p class="text-gray-400 text-sm">© 2024 Shubhzone. All rights reserved.</p><div class="mt-2"><a class="text-primary-dark hover:underline text-sm mx-2" href="#" onclick="showLegalPage('privacyPolicyPage')">Privacy Policy</a><span class="text-gray-500">|</span><a class="text-primary-dark hover:underline text-sm mx-2" href="#" onclick="showLegalPage('termsAndConditionsPage')">Terms of Service</a></div></footer>
 </div>
 
-<script>
-  function sendToWhatsApp(event) {
-    event.preventDefault(); // This stops the form from submitting the traditional way.
+<!-- Employee Section -->
+<div id="employeePage">
+    <header class="flex items-center bg-white dark:bg-gray-900 p-4 pb-2 justify-between border-b border-gray-200 dark:border-gray-700">
+        <button class="text-text-light dark:text-text-dark font-bold flex items-center gap-2" onclick="goBackToLanding()"><span class="material-symbols-outlined">arrow_back</span> Back to Landing Page</button>
+        <h2 class="text-text-light dark:text-text-dark text-lg font-bold">Shubhzone Admin</h2>
+    </header>
+    <div class="p-4 sm:p-6">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-text-light dark:text-text-dark text-2xl font-bold">Candidate Data</h2>
+            <div class="flex items-center gap-4">
+                <button id="adminAddButton" style="display: none;" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 data-3d-effect" onclick="openAdminAddModal()">
+                    <span class="material-symbols-outlined">add_circle</span> Add Candidate
+                </button>
+                <button class="bg-primary text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 data-3d-effect" onclick="document.getElementById('filterModal').style.display='block'"><span class="material-symbols-outlined">filter_alt</span> Filter</button>
+            </div>
+        </div>
+        <div class="overflow-x-auto shadow-lg rounded-lg"><table class="min-w-full bg-white dark:bg-gray-800 text-sm"><thead class="professional-header text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"><tr><th scope="col" class="py-4 px-6">Name</th><th scope="col" class="py-4 px-6">Age</th><th scope="col" class="py-4 px-6">Phone</th><th scope="col" class="py-4 px-6">Gender</th><th scope="col" class="py-4 px-6">Qualification</th><th scope="col" class="py-4 px-6">Marital Status</th><th scope="col" class="py-4 px-6">Address</th><th scope="col" class="py-4 px-6">Actions</th><th scope="col" class="py-4 px-6">Status</th><th scope="col" class="py-4 px-6">Description</th><th scope="col" class="py-4 px-6">Unlock Time</th><th scope="col" class="py-4 px-6">Success</th></tr></thead><tbody id="candidateDataTable"></tbody></table></div>
+    </div>
+</div>
 
-    // Get the values from the form fields
-    const name = document.getElementById('fullName').value;
-    const age = document.getElementById('age').value;
-    const gender = document.getElementById('gender').value;
-    const address = document.getElementById('address').value;
-    const qualification = document.getElementById('qualification').value;
-    const maritalStatus = document.getElementById('maritalStatus').value;
+<!-- Modals -->
+<div id="passwordModal"><div class="modal-content"><h2 class="text-xl font-bold mb-4 text-text-light dark:text-text-dark">Enter Password</h2><input type="password" id="password" class="form-input w-full mb-4 p-2 border rounded dark:bg-gray-700" placeholder="Password"><button class="bg-primary text-white font-bold py-2 px-4 rounded" onclick="submitPassword()">Submit</button></div></div>
+<div id="filterModal"><div class="modal-content text-left"><h2 class="text-xl font-bold mb-4 text-text-light dark:text-text-dark text-center">Filter Candidates</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><input type="text" id="filterName" class="form-input w-full p-2 border rounded dark:bg-gray-700" placeholder="Search by name..."><select id="filterGender" class="form-select w-full p-2 border rounded dark:bg-gray-700"><option value="">All Genders</option><option value="Male">Male</option><option value="Female">Female</option></select><div class="flex gap-2"><input type="number" id="filterMinAge" class="form-input w-full p-2 border rounded dark:bg-gray-700" placeholder="Min Age"><input type="number" id="filterMaxAge" class="form-input w-full p-2 border rounded dark:bg-gray-700" placeholder="Max Age"></div><select id="filterLockStatus" class="form-select w-full p-2 border rounded dark:bg-gray-700"><option value="">All Lock Statuses</option><option value="locked">Locked</option><option value="unlocked">Unlocked</option></select><select id="filterLockedBy" class="form-select w-full p-2 border rounded dark:bg-gray-700"><option value="">All Users</option></select><select id="filterCandidateStatus" class="form-select w-full p-2 border rounded dark:bg-gray-700"><option value="">All Candidate Statuses</option><option>Call Busy</option><option>Not Picked Up</option><option>Not Interested</option><option>Will Join Later</option><option>Pickup Call</option><option>Successful</option></select><input type="date" id="filterUnlockDate" class="form-input w-full p-2 border rounded dark:bg-gray-700"><select id="filterNewData" class="form-select w-full p-2 border rounded dark:bg-gray-700"><option value="">All Data</option><option value="new">New Data Only</option></select></div><div class="flex justify-center gap-4 mt-6"><button class="bg-primary text-white font-bold py-2 px-6 rounded" onclick="applyFilters()">Apply</button><button class="bg-gray-500 text-white font-bold py-2 px-6 rounded" onclick="resetFilters()">Reset</button></div></div></div>
+<div id="privacyPolicyPage" class="legal-page bg-white dark:bg-background-dark text-text-light dark:text-text-dark p-6 md:p-10"><div class="container mx-auto max-w-4xl"><button class="font-bold mb-6" onclick="hideLegalPage('privacyPolicyPage')">&larr; Back</button><h1 class="text-3xl font-bold mb-4">Privacy Policy</h1><p class="mb-4">Last Updated: October 15, 2025</p><p class="mb-4">Shubhzone ("us", "we", or "our") operates the Shubhzone website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p><h2 class="text-2xl font-bold mt-6 mb-2">Information Collection and Use</h2><p class="mb-4">We collect personally identifiable information that you provide to us directly when you submit a job application. This information includes: Name, Age, Gender, Address, Qualification, Marital Status, and Phone Number. This data is stored in a secure Firestore database.</p><h2 class="text-2xl font-bold mt-6 mb-2">Use of Data</h2><p class="mb-4">Shubhzone uses the collected data for the sole purpose of processing your job application and for internal record-keeping. Your data will not be shared with third parties without your consent, except as required by law.</p><h2 class="text-2xl font-bold mt-6 mb-2">Data Security</h2><p class="mb-4">The security of your data is important to us. We use commercially acceptable means, including Firestore's security rules, to protect your Personal Data. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee its absolute security.</p></div></div>
+<div id="termsAndConditionsPage" class="legal-page bg-white dark:bg-background-dark text-text-light dark:text-text-dark p-6 md:p-10"><div class="container mx-auto max-w-4xl"><button class="font-bold mb-6" onclick="hideLegalPage('termsAndConditionsPage')">&larr; Back</button><h1 class="text-3xl font-bold mb-4">Terms of Service</h1><p class="mb-4">Last Updated: October 15, 2025</p><p class="mb-4">By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p><h2 class="text-2xl font-bold mt-6 mb-2">Job Applications</h2><p class="mb-4">By submitting an application, you warrant that all information provided by you is true, accurate, and complete. You understand that any false information or omission may lead to the rejection of your application.</p><h2 class="text-2xl font-bold mt-6 mb-2">Disclaimer</h2><p class="mb-4">The Service is provided on an "AS IS" and "AS AVAILABLE" basis. Shubhzone does not warrant that the results of using the service will meet your requirements.</p></div></div>
+
+<!-- Admin "Add Candidate" Modal -->
+<div id="addCandidateModal"><div class="modal-content"><span class="modal-close-btn" onclick="closeAdminAddModal()">&times;</span><h2 class="text-xl font-bold mb-4 text-text-light dark:text-text-dark text-center">Add New Candidate</h2><form class="flex flex-col gap-3 text-left" id="adminAddCandidateForm"><label class="flex flex-col"><p class="text-sm font-medium pb-1">Name</p><input class="form-input flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 h-12 p-3" id="admin_fullName" required></label><label class="flex flex-col"><p class="text-sm font-medium pb-1">Age</p><input class="form-input flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 h-12 p-3" id="admin_age" required type="number"></label><label class="flex flex-col"><p class="text-sm font-medium pb-1">Phone</p><input class="form-input flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 h-12 p-3" id="admin_phone" required type="tel" pattern="[0-9]{10}"></label><label class="flex flex-col"><p class="text-sm font-medium pb-1">Gender</p><select class="form-select flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gamma-700 h-12 p-3" id="admin_gender" required><option value="Male">Male</option><option value="Female">Female</option><option value="Other">Other</option></select></label><label class="flex flex-col"><p class="text-sm font-medium pb-1">Address</p><input class="form-input flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 h-12 p-3" id="admin_address" required></label><label class="flex flex-col"><p class="text-sm font-medium pb-1">Qualification</p><input class="form-input flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 h-12 p-3" id="admin_qualification" required></label><label class="flex flex-col"><p class="text-sm font-medium pb-1">Marital Status</p><select class="form-select flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 h-12 p-3" id="admin_maritalStatus" required><option value="Single">Single</option><option value="Married">Married</option><option value="Divorced">Divorced</option><option value="Widowed">Widowed</option></select></label><button class="btn-primary flex items-center justify-center rounded-lg h-12 px-5 mt-4 text-white text-base font-bold w-full" type="submit">Save Candidate</button></form></div></div>
+
+<!-- Description Card Modal -->
+<div id="descriptionModal" class="description-card-modal">
+    <div class="modal-content">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold text-text-light dark:text-text-dark">Edit Description</h2>
+            <span class="modal-close-btn" onclick="closeDescriptionModal()">&times;</span>
+        </div>
+        <textarea id="descriptionTextarea" class="form-textarea flex w-full rounded-lg text-text-light dark:text-text-dark bg-gray-100 dark:bg-gray-700 p-3" placeholder="Enter description..."></textarea>
+        <button id="saveDescriptionBtn" class="btn-primary flex items-center justify-center rounded-lg h-12 px-5 mt-4 text-white text-base font-bold w-full">Upload Description</button>
+    </div>
+</div>
+
+
+<!-- Firebase SDK and Configuration -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+    const firebaseConfig = { apiKey: "AIzaSyB2PG5JvDko2UmQDlY9gN5lBgga2vQy-Ws", authDomain: "conceptra-c1000.firebaseapp.com", databaseURL: "https://conceptra-c1000-default-rtdb.firebaseio.com", projectId: "conceptra-c1000", storageBucket: "conceptra-c1000.appspot.com", messagingSenderId: "298402987968", appId: "1:298402987968:web:c0d0d7d6c08cdfa6bc5225", measurementId: "G-QRQYEVSJJ6" };
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const candidatesCol = collection(db, "candidates");
+    const statesCol = collection(db, "candidateStates");
+
+    window.currentUser = null;
+    window.isMasterUser = false;
+    let countdownInterval = null;
+    let allCandidatesData = [];
+    let allStatesData = {};
+
+    const passwords = { 'Himanshu1': { color: 'blue' }, 'Himanshu2': { color: 'red' }, 'Himanshu3': { color: 'green' }, 'Malya1': { color: 'orange' }, 'Malya2': { color: 'yellow' }, 'Malya3': { color: 'pink' }, 'Shubham1': { color: 'skyblue' }, 'Shubham2': { color: 'violet' }, 'Shubham3': { color: 'brown' }, 'ShubhzoneMaster': { color: 'master' } };
+    const avengerCodenames = { 'Himanshu1': 'Iron Man', 'Himanshu2': 'Captain America', 'Himanshu3': 'Thor', 'Malya1': 'Hulk', 'Malya2': 'Black Widow', 'Malya3': 'Hawkeye', 'Shubham1': 'Spider-Man', 'Shubham2': 'Doctor Strange', 'Shubham3': 'Black Panther' };
+    const colorGradients = { 'blue': 'linear-gradient(100deg, #E6F0FF, #FFFFFF, #E6F0FF)', 'red': 'linear-gradient(100deg, #FFEBEB, #FFFFFF, #FFEBEB)', 'green': 'linear-gradient(100deg, #E6F9E6, #FFFFFF, #E6F9E6)', 'orange': 'linear-gradient(100deg, #FFF0E0, #FFFFFF, #FFF0E0)', 'yellow': 'linear-gradient(100deg, #FFFFE6, #FFFFFF, #FFFFE6)', 'pink': 'linear-gradient(100deg, #FFEBF5, #FFFFFF, #FFEBF5)', 'skyblue': 'linear-gradient(100deg, #E0F7FA, #FFFFFF, #E0F7FA)', 'violet': 'linear-gradient(100deg, #F3E5F5, #FFFFFF, #F3E5F5)', 'brown': 'linear-gradient(100deg, #EFEBE9, #FFFFFF, #EFEBE9)' };
     
-    // Check if any required field is empty
-    if (!name || !age || !gender || !address || !qualification || !maritalStatus) {
-        alert("Please fill out all the fields before submitting.");
-        return;
+    // Attaching functions to window to make them globally accessible from HTML
+    window.showLegalPage = (pageId) => { document.getElementById(pageId).style.display = 'block'; document.getElementById('mainContent').style.display = 'none'; };
+    window.hideLegalPage = (pageId) => { document.getElementById(pageId).style.display = 'none'; document.getElementById('mainContent').style.display = 'block'; };
+    window.openPasswordModal = () => document.getElementById('passwordModal').style.display = 'block';
+    window.goBackToLanding = () => { document.getElementById('employeePage').style.display = 'none'; document.getElementById('mainContent').style.display = 'block'; };
+    window.openAdminAddModal = () => document.getElementById('addCandidateModal').style.display = 'block';
+    window.closeAdminAddModal = () => document.getElementById('addCandidateModal').style.display = 'none';
+    window.openDescriptionModal = (candidateId, currentDescription, isEditable) => {
+        const modal = document.getElementById('descriptionModal');
+        const textarea = document.getElementById('descriptionTextarea');
+        const saveBtn = document.getElementById('saveDescriptionBtn');
+        textarea.value = currentDescription;
+        saveBtn.dataset.candidateId = candidateId;
+        if (isEditable) {
+            textarea.readOnly = false;
+            saveBtn.style.display = 'flex';
+            saveBtn.onclick = () => {
+                updateField(saveBtn.dataset.candidateId, 'description', textarea.value);
+                closeDescriptionModal();
+            };
+        } else {
+            textarea.readOnly = true;
+            saveBtn.style.display = 'none';
+        }
+        modal.style.display = 'block';
+    };
+    window.closeDescriptionModal = () => { document.getElementById('descriptionModal').style.display = 'none'; };
+    window.applyFilters = () => { /* Filter logic remains unchanged */ const dur = 864000000; const f = { name: document.getElementById('filterName').value.toLowerCase(), gender: document.getElementById('filterGender').value, minAge: parseInt(document.getElementById('filterMinAge').value) || 0, maxAge: parseInt(document.getElementById('filterMaxAge').value) || Infinity, lock: document.getElementById('filterLockStatus').value, lockedBy: document.getElementById('filterLockedBy').value, candStatus: document.getElementById('filterCandidateStatus').value, newData: document.getElementById('filterNewData').value, unlockDate: document.getElementById('filterUnlockDate').value }; document.querySelectorAll('.candidate-row').forEach(row => { const id = row.id.split('-')[2]; const c = allCandidatesData.find(can => can.id == id); const state = allStatesData[id] || {}; let v = true; if (!c) { v = false; } else { const lockTimestamp = state.lockTimestamp ? state.lockTimestamp.toMillis() : 0; if (f.name && !c.name.toLowerCase().includes(f.name)) v = false; if (f.gender && c.gender !== f.gender) v = false; if (c.age < f.minAge || c.age > f.maxAge) v = false; const isL = lockTimestamp && (Date.now() - lockTimestamp < dur); if (f.lock === 'locked' && !isL) v = false; if (f.lock === 'unlocked' && isL) v = false; if (f.lockedBy && state.lockedBy !== f.lockedBy) v = false; if (f.candStatus && (state.status || 'Select Status') !== f.candStatus) v = false; if (f.newData === 'new' && lockTimestamp) v = false; if (f.unlockDate && lockTimestamp && new Date(lockTimestamp).toISOString().split('T')[0] !== f.unlockDate) v = false; } row.style.display = v ? '' : 'none'; }); document.getElementById('filterModal').style.display = 'none'; };
+    window.resetFilters = () => { const form = document.getElementById('filterModal'); form.querySelectorAll('input, select').forEach(el => { if(el.type === 'select-one') el.selectedIndex = 0; else el.value = ''; }); document.querySelectorAll('.candidate-row').forEach(row => { row.style.display = ''; }); document.getElementById('filterModal').style.display = 'none'; };
+
+    document.getElementById('jobApplicationForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const newCandidate = {
+            name: form.querySelector('#fullName').value, age: form.querySelector('#age').value, phone: form.querySelector('#phone').value,
+            gender: form.querySelector('#gender').value, address: form.querySelector('#address').value, qualification: form.querySelector('#qualification').value,
+            maritalStatus: form.querySelector('#maritalStatus').value, createdAt: serverTimestamp()
+        };
+        try {
+            await addDoc(candidatesCol, newCandidate);
+            const phoneNumber = '7390928912';
+            let message = `*New Job Application from Shubhzone*\n\n` + `*Name:* ${newCandidate.name}\n` + `*Age:* ${newCandidate.age}\n` + `*Phone:* ${newCandidate.phone}\n` + `*Gender:* ${newCandidate.gender}\n` + `*Address:* ${newCandidate.address}\n` + `*Qualification:* ${newCandidate.qualification}\n` + `*Marital Status:* ${newCandidate.maritalStatus}\n`;
+            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+            alert('Application submitted successfully!');
+            form.reset();
+        } catch (error) { console.error("Error adding document: ", error); alert('Failed to submit application. Please check console for errors.'); }
+    });
+
+    window.submitPassword = () => {
+        const password = document.getElementById('password').value;
+        if (passwords[password]) {
+            window.currentUser = { id: password, color: passwords[password].color };
+            window.isMasterUser = (password === 'ShubhzoneMaster');
+            if (window.isMasterUser) { document.getElementById('adminAddButton').style.display = 'flex'; }
+            document.getElementById('passwordModal').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'none';
+            document.getElementById('employeePage').style.display = 'block';
+            populateFilterUsers();
+            setupRealtimeListeners();
+            startCountdownTimer();
+        } else { alert('Incorrect password.'); }
+    };
+    
+    function setupRealtimeListeners() {
+        onSnapshot(candidatesCol, (snapshot) => { allCandidatesData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })); renderCandidateTable(); });
+        onSnapshot(statesCol, (snapshot) => { allStatesData = {}; snapshot.forEach(doc => { allStatesData[doc.id] = doc.data(); }); renderCandidateTable(); });
+    }
+    
+    function generateRandomMessage(name) {
+        const messages = [
+            `Hello ${name}, we're offering a work-from-home opportunity with a potential earning of 20,000 to 30,000. Let us know if you're interested in learning more.`,
+            `Hi ${name}, you applied for our work-from-home position. This is a great chance to earn between 20,000 and 30,000. Are you available for a quick chat?`,
+            `Greetings ${name}! We have a work-from-home job that might interest you, with a salary of 20,000-30,000. Reply if you'd like to proceed.`,
+            `Hello ${name}, we have an exciting work-from-home opportunity available. Earn between 20,000-30,000. Are you interested?`,
+            `Hi ${name}, thank you for your application. Our work-from-home role offers a salary of 20,000 to 30,000. Let us know if this interests you.`,
+            `Dear ${name}, we are pleased to offer you a work-from-home position with a competitive salary of 20,000-30,000. Please respond if you're interested.`,
+            `Hello ${name}, are you still looking for a job? We have a work-from-home opportunity with a salary of 20,000-30,000.`,
+            `Hi ${name}, we're hiring for a remote position with a potential income of 20,000-30,000. Let us know if you'd like to hear more.`,
+            `Greetings ${name}! We have a work-from-home opening that allows you to earn 20,000-30,000. Are you interested in the details?`,
+            `Hello ${name}, we're providing a great work-from-home opportunity. You can earn between 20,000 and 30,000. Let us know your interest.`,
+            `Hi ${name}, you've applied for a remote job. This role offers 20,000-30,000 per month. Are you available to discuss further?`,
+            `Dear ${name}, we have a work-from-home vacancy with an attractive salary of 20,000-30,000. Let us know if you're interested.`,
+            `Hello ${name}, interested in earning 20,000-30,000 from home? We have an opportunity for you.`,
+            `Hi ${name}, we have an open position for a work-from-home role with a salary of 20,000-30,000. Would you like to know more?`,
+            `Greetings ${name}! We're offering a flexible work-from-home job with a potential income of 20,000-30,000.`,
+            `Hello ${name}, we have a work-from-home role that pays 20,000-30,000. Let us know if you're interested in applying.`,
+            `Hi ${name}, you can earn 20,000-30,000 with our new work-from-home position. Would you like more information?`,
+            `Dear ${name}, we are offering a chance to work from home and earn 20,000-30,000. Let us know if this opportunity interests you.`,
+            `Hello ${name}, we're looking for candidates for a remote job with a salary of 20,000-30,000. Are you interested?`,
+            `Hi ${name}, earn 20,000-30,000 from the comfort of your home. Let us know if you'd like to discuss this opportunity.`,
+            `Greetings ${name}! We have a remote job opening with a salary of 20,000-30,000. Would you like to apply?`,
+            `Hello ${name}, we invite you to explore a work-from-home opportunity with an earning potential of 20,000-30,000.`,
+            `Hi ${name}, you can work from home and earn 20,000-30,000. Let us know if you want to learn more about this role.`,
+            `Dear ${name}, we are hiring for a work-from-home position that pays 20,000-30,000. Are you interested in the details?`,
+            `Hello ${name}, we have a flexible work-from-home job that can help you earn 20,000-30,000. Let's connect if you're interested.`,
+            `Hi ${name}, we're offering a work-from-home job with a salary of 20,000-30,000. Let us know if you'd like to get started.`,
+            `Greetings ${name}! You can earn 20,000-30,000 from home with our new job opening. Let us know if you're interested.`,
+            `Hello ${name}, we have a work-from-home opportunity with a monthly income of 20,000-30,000. Would you like to know more?`,
+            `Hi ${name}, this is an opportunity to work from home and earn 20,000-30,000. Let us know if you're interested in the details.`,
+            `Dear ${name}, we are offering a remote position with a salary of 20,000-30,000. If you're interested, please let us know.`
+        ];
+        return messages[Math.floor(Math.random() * messages.length)];
+    }
+    
+    window.sendWhatsAppMessage = (phone, name) => {
+        const message = generateRandomMessage(name);
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    };
+
+    function renderCandidateTable() {
+        const tbody = document.getElementById('candidateDataTable');
+        tbody.innerHTML = '';
+        const LOCK_DURATION = 10 * 24 * 60 * 60 * 1000;
+        allCandidatesData.sort((a,b) => (b.createdAt?.toMillis() || 0) - (a.createdAt?.toMillis() || 0));
+        allCandidatesData.forEach(candidate => {
+            let state = allStatesData[candidate.id] || {};
+            const row = document.createElement('tr');
+            row.className = 'border-b dark:border-gray-700 candidate-row data-3d-effect';
+            row.id = `candidate-row-${candidate.id}`;
+            const lockTimestamp = state.lockTimestamp ? state.lockTimestamp.toMillis() : 0;
+            const isLockedByTime = lockTimestamp && (Date.now() - lockTimestamp < LOCK_DURATION);
+            let actionsHtml = '';
+            let isEditable = false;
+
+            if (state.status === 'Successful') {
+                row.style.background = 'linear-gradient(100deg, #d4edda, #fafffa, #d4edda)';
+            }
+            
+            if (window.isMasterUser) {
+                isEditable = true;
+            } else if (isLockedByTime && state.lockedBy === window.currentUser.id) {
+                isEditable = true;
+            }
+
+            // Disable editing if deal is successful
+            if (state.status === 'Successful') {
+                isEditable = false;
+            }
+
+            if (isEditable && window.isMasterUser) {
+                actionsHtml = `<div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-600 cursor-pointer" title="WhatsApp" onclick="sendWhatsAppMessage('${candidate.phone}', '${candidate.name}')">chat</span><a href="tel:${candidate.phone}" title="Call"><span class="material-symbols-outlined text-blue-600 cursor-pointer">call</span></a><span class="material-symbols-outlined delete-icon" title="Delete Candidate" onclick="deleteCandidate('${candidate.id}')">delete</span></div>`;
+            } else if (isEditable) {
+                row.style.background = colorGradients[state.lockColor] || 'none';
+                 actionsHtml = `<div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-600 cursor-pointer" title="WhatsApp" onclick="sendWhatsAppMessage('${candidate.phone}', '${candidate.name}')">chat</span><a href="tel:${candidate.phone}" title="Call"><span class="material-symbols-outlined text-blue-600 cursor-pointer">call</span></a></div>`;
+            } else if (isLockedByTime) {
+                row.style.background = colorGradients[state.lockColor] || 'none';
+                 actionsHtml = `<div><span class="material-symbols-outlined text-gray-500" title="Locked by ${avengerCodenames[state.lockedBy] || state.lockedBy}">lock</span><div class="countdown-timer" data-expire-time="${lockTimestamp + LOCK_DURATION}"></div></div>`;
+            } else {
+                actionsHtml = `<span class="material-symbols-outlined text-red-600 cursor-pointer" onclick="unlockActions('${candidate.id}')">lock_open</span>`;
+            }
+
+            if (state.status === 'Successful') {
+                actionsHtml = `<span class="text-green-800 font-bold">DEAL CLOSED</span>`;
+            }
+
+            const descriptionDisplay = state.description ? (state.description.substring(0, 20) + (state.description.length > 20 ? '...' : '')) : 'Click to edit...';
+            const descriptionCellContent = `<div class="p-2.5 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 status-box" onclick="openDescriptionModal('${candidate.id}', \`${state.description || ''}\`, ${isEditable})">${descriptionDisplay}</div>`;
+            
+            const successButton = state.status === 'Successful' 
+                ? `<span class="text-green-600 font-bold text-lg">Completed</span>`
+                : `<button class="success-button" onclick="markAsSuccessful('${candidate.id}')" ${!isEditable ? 'disabled' : ''}>Success</button>`;
+            
+            const statusOptions = ['Select Status', 'Call Busy', 'Not Picked Up', 'Not Interested', 'Will Join Later', 'Pickup Call', 'Successful'];
+            const statusSelect = `<select class="form-select text-sm rounded-lg block w-full p-2.5 bg-gray-50 dark:bg-gray-700 status-box" onchange="updateField('${candidate.id}', 'status', this.value)" ${!isEditable ? 'disabled' : ''}>
+                ${statusOptions.map(opt => `<option value="${opt}" ${state.status === opt ? 'selected' : ''}>${opt}</option>`).join('')}
+            </select>`;
+
+            row.innerHTML = `<td class="py-4 px-6 font-medium text-gray-900 dark:text-white">${candidate.name}</td><td class="py-4 px-6">${candidate.age}</td><td class="py-4 px-6">${candidate.phone}</td><td class="py-4 px-6">${candidate.gender}</td><td class="py-4 px-6">${candidate.qualification}</td><td class="py-4 px-6">${candidate.maritalStatus}</td><td class="py-4 px-6">${candidate.address}</td><td class="py-4 px-6">${actionsHtml}</td><td class="py-4 px-6">${statusSelect}</td><td class="py-4 px-6">${descriptionCellContent}</td><td class="py-4 px-6 text-xs">${lockTimestamp ? new Date(lockTimestamp).toLocaleString('en-GB') : 'N/A'}</td><td class="py-4 px-6 text-center">${successButton}</td>`;
+            tbody.appendChild(row);
+        });
+        applyFilters();
     }
 
-    // The phone number provided by you
-    const phoneNumber = '7390928912';
-
-    // Construct the message
-    let message = `*New Job Application from Shubhzone*\n\n`;
-    message += `*Name:* ${name}\n`;
-    message += `*Age:* ${age}\n`;
-    message += `*Gender:* ${gender}\n`;
-    message += `*Address:* ${address}\n`;
-    message += `*Qualification:* ${qualification}\n`;
-    message += `*Marital Status:* ${maritalStatus}\n`;
-
-    // Encode the message for the URL
-    const encodedMessage = encodeURIComponent(message);
-
-    // Create the WhatsApp URL
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    // Open the WhatsApp URL in a new tab
-    window.open(whatsappURL, '_blank');
-  }
+    window.unlockActions = async (candidateId) => { await setDoc(doc(db, "candidateStates", candidateId), { ...(allStatesData[candidateId] || {}), lockedBy: window.currentUser.id, lockTimestamp: serverTimestamp(), lockColor: window.currentUser.color }, { merge: true }); };
+    window.updateField = async (candidateId, field, value) => { await setDoc(doc(db, "candidateStates", candidateId), { [field]: value }, { merge: true }); };
+    window.deleteCandidate = async (candidateId) => { if (confirm(`Are you sure you want to permanently delete this candidate? This action cannot be undone.`)) { try { await deleteDoc(doc(db, "candidates", candidateId)); await deleteDoc(doc(db, "candidateStates", candidateId)); alert('Candidate deleted successfully.'); } catch (error) { console.error("Error deleting document: ", error); alert('Failed to delete candidate.'); } } };
+    
+    window.markAsSuccessful = async (candidateId) => {
+        if (confirm('Are you sure you want to mark this candidate as successful?')) {
+            await updateField(candidateId, 'status', 'Successful');
+            alert('Candidate marked as successful!');
+        }
+    };
+    
+    function startCountdownTimer() { if (countdownInterval) clearInterval(countdownInterval); countdownInterval = setInterval(() => { document.querySelectorAll('.countdown-timer').forEach(timer => { const expireTime = parseInt(timer.dataset.expireTime, 10); const remaining = expireTime - Date.now(); if (remaining > 0) { const d = Math.floor(remaining / 86400000), h = Math.floor((remaining % 86400000) / 3600000), m = Math.floor((remaining % 3600000) / 60000), s = Math.floor((remaining % 60000) / 1000); timer.innerHTML = `${d}d ${h}h ${m}m ${s}s`; } else { timer.innerHTML = "Unlocked"; } }); }, 1000); }
+    function populateFilterUsers() { const userSelect = document.getElementById('filterLockedBy'); userSelect.innerHTML = '<option value="">All Users</option>'; Object.keys(passwords).filter(u => u !== 'ShubhzoneMaster').forEach(user => { const option = document.createElement('option'); option.value = user; option.textContent = avengerCodenames[user] || user; userSelect.appendChild(option); }); }
+    
+    document.getElementById('adminAddCandidateForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const newCandidate = {
+            name: form.querySelector('#admin_fullName').value, age: form.querySelector('#admin_age').value, phone: form.querySelector('#admin_phone').value,
+            gender: form.querySelector('#admin_gender').value, address: form.querySelector('#admin_address').value, qualification: form.querySelector('#admin_qualification').value,
+            maritalStatus: form.querySelector('#admin_maritalStatus').value, createdAt: serverTimestamp()
+        };
+        try { await addDoc(candidatesCol, newCandidate); alert('Candidate added successfully!'); form.reset(); closeAdminAddModal(); } 
+        catch (error) { console.error("Error adding document: ", error); alert('Failed to add candidate.'); }
+    });
 </script>
-
-</body></html>
+</body>
+</html>
